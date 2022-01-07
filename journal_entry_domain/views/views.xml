@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="journal_entry_domain.list">
+      <field name="name">journal_entry_domain list</field>
+      <field name="model">journal_entry_domain.journal_entry_domain</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="journal_entry_domain.action_window">
+      <field name="name">journal_entry_domain window</field>
+      <field name="res_model">journal_entry_domain.journal_entry_domain</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="journal_entry_domain.action_server">
+      <field name="name">journal_entry_domain server</field>
+      <field name="model_id" ref="model_journal_entry_domain_journal_entry_domain"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="journal_entry_domain" id="journal_entry_domain.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="journal_entry_domain.menu_1" parent="journal_entry_domain.menu_root"/>
+    <menuitem name="Menu 2" id="journal_entry_domain.menu_2" parent="journal_entry_domain.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="journal_entry_domain.menu_1_list" parent="journal_entry_domain.menu_1"
+              action="journal_entry_domain.action_window"/>
+    <menuitem name="Server to list" id="journal_entry_domain" parent="journal_entry_domain.menu_2"
+              action="journal_entry_domain.action_server"/>
+-->
+  </data>
+</odoo>
