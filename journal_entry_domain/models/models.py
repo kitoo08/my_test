@@ -24,5 +24,4 @@ class AccountMove(models.Model):
     
 
     journal_id = fields.Many2one('account.journal', string='Journal', required=True, readonly=True,
-        states={'draft': [('readonly', False)]},
-        check_company=True, default=_get_default_journal)
+        states={'draft': [('readonly', False)]}, check_company=True)
